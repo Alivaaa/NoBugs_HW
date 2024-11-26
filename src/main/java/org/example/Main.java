@@ -1,9 +1,98 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.example.HW1.HW1;
+import org.example.HW2.*;
+
 public class Main {
     public static void main(String[] args) {
+        //для HW2
+        //class Book
+        Book testBook = new Book("Test Author", "Test Title", 250.00);
+        testBook.setAuthor("New Test Author");
+        testBook.setPrice(299.99);
+
+        System.out.println(testBook.getAuthor() + " " + testBook.getTitle() + " " + testBook.getPrice());
+
+        //class Person
+        Person person1 = new Person("Jack", 36);
+        person1.printInfo();
+
+        Person person2 = new Person();
+        person2.setName("Lily");
+        person2.setAge(23);
+        person2.setGender("woman");
+
+        //class Car
+        Car car = new Car();
+        car.setPrice(2500.0);
+        car.printCarInfo();
+
+        //class Product
+        Product product = new Product("Test Product", "For testing", 1, 10);
+        product.setQuantity(10);
+        product.printProductInfo();
+
+        //class Student
+        Student[] students = new Student[3];
+        students[0] = new Student("Bob", 12, 99.1);
+        students[1] = new Student("Anna", 16, 89.5);
+        students[2] = new Student("Peter", 96, 45.5);
+
+        for(int i = 0; i < students.length; i++){
+            students[i].printStudentDetails();
+        }
+
+        //class Currency
+        Currency currencyRUB = new Currency("RUB", 100.0);
+        currencyRUB.printCurrencyInfo();
+        System.out.println("RUB -> USD: " + currencyRUB.convertToUSD(10));
+
+        //class Phone
+        Phone phone = new Phone("Test Brand", "Test model", 2000.50);
+        phone.applyDiscount(50);
+        phone.printPhoneDetails();
+
+        //class Employee
+        Employee employee1 = new Employee("Mary", "Developer", 3000.00);
+        employee1.increaseSalary(5);
+        employee1.printEmployeeInfo();
+
+        Employee employee2 = new Employee("Emily", "HR", 1500.00);
+        employee2.increaseSalary(10);
+        employee2.printEmployeeInfo();
+
+        //class Triangle
+        Triangle triangle = new Triangle(10.0, 20.0, 20.0);
+        triangle.printTriangleInfo();
+
+        //class Player
+        Player player = new Player("Madovator", 99, 2578);
+        player.increaseLevel();
+        player.addScore(250);
+        player.printPlayerInfo();
+
+        //class Rectangle
+        Rectangle rectangle = new Rectangle(10, 20);
+        rectangle.printRectangleInfo();
+
+        //class Customer
+        Customer customer = new Customer("Test customer", "test@mail.com");
+        customer.addPurchase("Apple");
+        customer.addPurchase("Milk");
+        customer.addPurchase("Bread");
+        customer.printPurchaseHistory();
+
+        //class Company
+        Company company = new Company("Test company", 1000, 250000.0);
+        company.printCompanyInfo();
+
+        //class Circle
+        Circle circle = new Circle(100);
+        circle.printCircleInfo();
+
+
+        /**
+        //для HW1
         HW1 hw1 = new HW1();
 
         //тест для метода checkDivisionOn5and7
@@ -91,5 +180,6 @@ public class Main {
         //тест для метода checkIfDivisionReminderIs2
         System.out.println("Проверить что 8 делится на 6 с остатком 2 " + hw1.checkIfDivisionReminderIs2(8, 6));
         System.out.println("Проверить что 9 делится на 6 с остатком 2 " + hw1.checkIfDivisionReminderIs2(9, 6));
+         **/
     }
 }
